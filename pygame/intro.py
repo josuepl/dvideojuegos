@@ -51,6 +51,7 @@ cRojo = Cuadrado(100,100,40,rojo)
 cVerde = Cuadrado(100,120,20,verde)
 cAzul = Cuadrado(100,140,10,azul)
 
+
 #Ciclo infinito de interacción con la libreria o videojuego
 while True:
     # Espacio para agregar los elementos gráficos y de audio
