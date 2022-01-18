@@ -10,7 +10,7 @@ pantalla = pygame.display.set_mode(tamPant)
 
 reloj = pygame.time.Clock() # Se define la variable reloj manejador de refresco de pantalla
 
-cRojo = Cuadrado(100,100,10,(255,50,50))
+cRojo = Cuadrado(100,100,40,(255,50,50))
 while True:
     pygame.Surface.fill(pantalla,(0,0,0),None)
     for event in pygame.event.get():
@@ -26,5 +26,5 @@ while True:
     cRojo.posY = (cRojo.posY*cRojo.vely)
     cRojo.comprobarL(400,400)
     pygame.display.update()
-    reloj.tick(60) # Define la tasa de 60 fps
+    reloj.tick(120) # Define la tasa de 60 FPS
     pass

@@ -15,14 +15,18 @@ cRojo = Cuadrado(100,100,10,(255,50,50))
 while True:
     pygame.Surface.fill(pantalla,(0,0,0),None)
     for event in pygame.event.get():
-        #rint(event.type)
+        #print(event.type)
         if event.type == pygame.QUIT:
             pygame.quit()
             exit()
         if event.type == pygame.KEYDOWN:
-            print("Tecla presionada: ",event.type)
+            print("Tecla presionada: ",event.type, "Tecla: ",event.key)
             if event.key == pygame.K_a:
-                print("Tecla a apretada",pygame.K_a)
+                print("Tecla 'a/A' apretada",pygame.K_a)
+                cRojo.posY += 10
+            if event.key == pygame.K_q:
+                print("Tecla 'q/Q' apretada",pygame.K_q)
+                cRojo.posY -= 10
         if event.type == pygame.KEYUP:
             print("Tecla liberada: ",event.type)
             
