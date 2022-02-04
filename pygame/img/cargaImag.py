@@ -44,8 +44,10 @@ while True:
                 print("Tecla 'w/W' apretada",pygame.K_q)
                 posY -= 10
             if event.key == pygame.K_a:
+                print("Tecla 'a/A' apretada",pygame.K_q)
                 posX -= 10
             if event.key == pygame.K_d:
+                print("Tecla 'd/D' apretada",pygame.K_q)
                 posX += 10
     btnIzq, btnMed, btnDer = pygame.mouse.get_pressed()
     print(btnIzq,btnMed,btnDer)
