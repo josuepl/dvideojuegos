@@ -19,6 +19,7 @@ class Cuadrado:
             self.velx = 1
             print("Limite X >:",self.posX )
         if self.posY <= 0:
+            self.posY = 5
             self.vely = 1
             print("Limite Y >:",self.posY )
         pass
