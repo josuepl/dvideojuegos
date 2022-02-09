@@ -20,6 +20,7 @@ posX = 20
 posY = 20
 print(imgs)
 imgScale = pygame.transform.scale(imgs[0],[30,50])
+pxMov = 5
 while True:
     pygame.Surface.fill(pantalla,(255,255,255),None)
     
@@ -39,25 +40,26 @@ while True:
             print("Tecla presionada: ",event.type, "Tecla: ",event.key)
             if event.key == pygame.K_s:
                 print("Tecla 's/S' apretada",pygame.K_a)
-                posY += 10
+                posY += pxMov
             if event.key == pygame.K_w:
                 print("Tecla 'w/W' apretada",pygame.K_q)
-                posY -= 10
+                posY -= pxMov
             if event.key == pygame.K_a:
                 print("Tecla 'a/A' apretada",pygame.K_q)
-                posX -= 10
+                posX -= pxMov
             if event.key == pygame.K_d:
                 print("Tecla 'd/D' apretada",pygame.K_q)
-                posX += 10
+                posX += pxMov
     btnIzq, btnMed, btnDer = pygame.mouse.get_pressed()
-    print(btnIzq,btnMed,btnDer)
     if btnIzq:
-        posX += 10
-        posY += 10
+        posX += pxMov
+        posY += pxMov
+        print(btnIzq,btnMed,btnDer)
     elif btnMed:
         posX += 10
+        print(btnIzq,btnMed,btnDer)
     elif btnDer:
         posY += 10
-    
+        print(btnIzq,btnMed,btnDer)
     pygame.display.update()
     reloj.tick(60)
